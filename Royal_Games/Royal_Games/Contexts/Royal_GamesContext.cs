@@ -22,7 +22,7 @@ public partial class Royal_GamesContext : DbContext
 
     public virtual DbSet<Jogo> Jogo { get; set; }
 
-    public virtual DbSet<Log_AlteracaoJogo> Log_AlteracaoJogo { get; set; }
+    public virtual DbSet<LogAlteracaoJogo> Log_AlteracaoJogo { get; set; }
 
     public virtual DbSet<Plataforma> Plataforma { get; set; }
 
@@ -106,7 +106,7 @@ public partial class Royal_GamesContext : DbContext
                     });
         });
 
-        modelBuilder.Entity<Log_AlteracaoJogo>(entity =>
+        modelBuilder.Entity<LogAlteracaoJogo>(entity =>
         {
             entity.HasKey(e => e.Log_AlteracaoJogoID).HasName("PK__Log_Alte__BB9D2C4F166D3445");
 

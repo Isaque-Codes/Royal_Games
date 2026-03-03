@@ -23,7 +23,7 @@ public partial class Jogo
 
     public virtual ClassIndicativa? Class_Indicativa { get; set; }
 
-    public virtual ICollection<Log_AlteracaoJogo> Log_AlteracaoJogo { get; set; } = new List<Log_AlteracaoJogo>();
+    public virtual ICollection<LogAlteracaoJogo> Log_AlteracaoJogo { get; set; } = new List<LogAlteracaoJogo>();
 
     public virtual Usuario? Usuario { get; set; }
 
