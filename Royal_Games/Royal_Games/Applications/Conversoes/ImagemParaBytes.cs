@@ -1,6 +1,6 @@
 ﻿namespace Royal_Games.Applications.Conversoes
 {
-    public class AntiBugMerge2
+    public class ImagemParaBytes
     {
     }
 }
