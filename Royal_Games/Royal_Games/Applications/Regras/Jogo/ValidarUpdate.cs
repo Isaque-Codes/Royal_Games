@@ -1,11 +1,11 @@
 ﻿using Royal_Games.DTOs.JogoDto;
 using Royal_Games.Exceptions;
 
-namespace Royal_Games.Applications.Regras
+namespace Royal_Games.Applications.Regras.Jogo
 {
-    public class ValidarJogo
+    public class ValidarUpdate
     {
-        private static void Validar(CriarJogoDto jogoDto)
+        public static void Validar(AtualizarJogoDto jogoDto)
         {
             if (string.IsNullOrWhiteSpace(jogoDto.Nome))
             {
@@ -15,11 +15,6 @@ namespace Royal_Games.Applications.Regras
             if (jogoDto.Preco <= 0)
             {
                 throw new DomainException("O preço deve ser superior a zero.");
-            }
-
-            if (jogoDto.Imagem == null || jogoDto.Imagem.Length == 0)
-            {
-                throw new DomainException("A imagem é obrigatória.");
             }
 
             if (jogoDto.GeneroIds == null || jogoDto.GeneroIds.Count == 0)

@@ -8,7 +8,7 @@
 
         public string Descricao { get; set; } = null!;
 
-        public byte[] Imagem { get; set; } = null!;
+        public IFormFile Imagem { get; set; } = null!;
 
         public int? Class_IndicativaID { get; set; }
 
