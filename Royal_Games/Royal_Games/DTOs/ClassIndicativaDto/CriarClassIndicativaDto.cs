@@ -2,5 +2,6 @@
 {
     public class CriarClassIndicativaDto
     {
+        public string Nome { get; set; } = null!;
     }
 }
