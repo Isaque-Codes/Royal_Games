@@ -101,4 +101,5 @@ namespace Royal_Games.Controllers
                 return BadRequest(ex.Message);
             }
         }
+    }
 }
