@@ -16,6 +16,6 @@ namespace Royal_Games.Domains
         public int? JogoID { get; set; }
 
         public virtual Jogo? Jogo { get; set; }
-        public object LogAlteracaoJogoID { get; internal set; }
+        public int LogAlteracaoJogoID { get; set; }
     }
 }

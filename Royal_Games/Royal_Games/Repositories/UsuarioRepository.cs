@@ -4,7 +4,7 @@ using Royal_Games.Interfaces;
 
 namespace Royal_Games.Repositories
 {
-    public class UsuarioRepository
+    public class UsuarioRepository : IUsuarioRepository   // <-- precisa ter ": IUsuarioRepository"
     {
         private readonly Royal_GamesContext _context;
 

@@ -1,4 +1,9 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System.Text;
+using Royal_Games.Applications.Autenticacao;
 using Royal_Games.Applications.Services;
 using Royal_Games.Contexts;
 using Royal_Games.Interfaces;
