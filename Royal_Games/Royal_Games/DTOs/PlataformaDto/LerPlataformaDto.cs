@@ -5,5 +5,6 @@
         public int PlataformaID { get; set; }
 
         public string Nome { get; set; } = null!;
+        public int CategoriaID { get; internal set; }
     }
 }

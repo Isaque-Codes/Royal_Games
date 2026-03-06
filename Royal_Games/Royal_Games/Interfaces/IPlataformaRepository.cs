@@ -7,7 +7,7 @@ namespace Royal_Games.Interfaces
         List<Plataforma> Listar();
         Plataforma ObterPorId(int id);
 
-        bool NomeExiste(string nome, int? categoriaIdAtual = null);
+        bool NomeExiste(string nome, int? categoriaIdAtual = null, int plataformaIdAtual = 0);
 
         void Adicionar(Plataforma plataforma);
         void Atualizar(Plataforma plataforma);

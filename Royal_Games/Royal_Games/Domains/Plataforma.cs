@@ -10,4 +10,5 @@ public partial class Plataforma
     public string Nome { get; set; } = null!;
 
     public virtual ICollection<Jogo> Jogo { get; set; } = new List<Jogo>();
+    public int CategoriaID { get; internal set; }
 }

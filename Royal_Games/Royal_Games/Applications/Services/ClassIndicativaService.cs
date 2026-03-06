@@ -1,5 +1,7 @@
 ﻿using Royal_Games.Domains;
+using Royal_Games.DTOs.ClassIndicativaDto;
 using Royal_Games.Exceptions;
+using Royal_Games.Interfaces;
 
 namespace Royal_Games.Applications.Services
 {

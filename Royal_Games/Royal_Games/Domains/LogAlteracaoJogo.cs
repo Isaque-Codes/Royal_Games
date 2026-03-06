@@ -1,4 +1,5 @@
 ﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Royal_Games.Domains
@@ -16,6 +17,6 @@ namespace Royal_Games.Domains
         public int? JogoID { get; set; }
 
         public virtual Jogo? Jogo { get; set; }
-        public object LogAlteracaoJogoID { get; internal set; }
+        public int LogAlteracaoJogoID { get; set; }
     }
 }

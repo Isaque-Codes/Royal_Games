@@ -1,5 +1,7 @@
 ﻿using Royal_Games.Domains;
+using Royal_Games.DTOs.PlataformaDto;
 using Royal_Games.Exceptions;
+using Royal_Games.Interfaces;
 
 namespace Royal_Games.Applications.Services
 {
@@ -17,7 +19,7 @@ namespace Royal_Games.Applications.Services
             List<Plataforma> plataformas = _repository.Listar();
 
             // converte cada categoria para LerCategoriaDto
-            List<LerPlataformaDto> plataformaDto = Plataformas.Select(plataforma => new LerPlataformasDto
+            List<LerPlataformaDto> plataformaDto = plataformas.Select(plataforma => new LerPlataformaDto
             {
                 PlataformaID = plataforma.CategoriaID,
                 Nome = plataforma.Nome

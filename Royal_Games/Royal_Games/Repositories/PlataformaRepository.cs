@@ -79,5 +79,10 @@ namespace Royal_Games.Repositories
             _context.Plataforma.Remove(plataformaBanco);
             _context.SaveChanges();
         }
+
+        public bool NomeExiste(string nome, int? categoriaIdAtual = null, int plataformaIdAtual = 0)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Royal_Games.Applications.Services;
-using Royal_Games.Domains;
+using Royal_Games.DTOs.PlataformaDto;
+using Royal_Games.DTOs.UsuarioDto;
 using Royal_Games.Exceptions;
 
 namespace Royal_Games.Controllers

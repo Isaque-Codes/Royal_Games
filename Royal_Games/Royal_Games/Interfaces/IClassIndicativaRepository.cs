@@ -7,7 +7,7 @@ namespace Royal_Games.Interfaces
         List<ClassIndicativa> Listar();
         ClassIndicativa ObterPorId(int id);
 
-        bool NomeExiste(string nome, int? categoriaIdAtual = null);
+        bool NomeExiste(string nome, int? categoriaIdAtual = null, int classIndicativaIdAtual = 0);
 
         void Adicionar(ClassIndicativa categoria);
         void Atualizar(ClassIndicativa categoria);
