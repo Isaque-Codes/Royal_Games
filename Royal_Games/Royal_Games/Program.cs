@@ -8,6 +8,7 @@ using Royal_Games.Applications.Services;
 using Royal_Games.Contexts;
 using Royal_Games.Interfaces;
 using Royal_Games.Repositories;
+using VH_Burguer.Applications.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -51,6 +52,14 @@ builder.Services.AddDbContext<Royal_GamesContext>(options => options.UseSqlServe
 // JOGO
 builder.Services.AddScoped<IJogoRepository, JogoRepository>();
 builder.Services.AddScoped<JogoService>();
+
+// GENERO
+builder.Services.AddScoped<IGeneroRepository, GeneroRepository>();
+builder.Services.AddScoped<GeneroService>();
+
+// USUARIO
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<UsuarioService>();
 
 // INICIO DO JWT
 builder.Services.AddScoped<GeradorTokenJwt>();

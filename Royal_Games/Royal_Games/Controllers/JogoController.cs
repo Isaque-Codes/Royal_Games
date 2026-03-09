@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Royal_Games.Applications.Services;
 using Royal_Games.DTOs.JogoDto;
@@ -74,7 +75,7 @@ namespace Royal_Games.Controllers
 
         [HttpPost]
         [Consumes("multipart/form-data")]
-        //[Authorize]
+        [Authorize]
         public ActionResult Adicionar([FromForm] CriarJogoDto jogoDto)
         {
             try
@@ -93,7 +94,7 @@ namespace Royal_Games.Controllers
 
         [HttpPut("{id}")]
         [Consumes("multipart/form-data")]
-        //[Authorize]
+        [Authorize]
         public ActionResult Atualizar(int id, [FromForm] AtualizarJogoDto jogoDto)
         {
             try
@@ -110,7 +111,7 @@ namespace Royal_Games.Controllers
         }
 
         [HttpDelete("{id}")]
-        //[Authorize]
+        [Authorize]
         public ActionResult Remover(int id)
         {
             try
