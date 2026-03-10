@@ -51,7 +51,7 @@ namespace Royal_Games.Controllers
 
             catch (DomainException ex)
             {
-                throw new DomainException(ex.Message);
+                return BadRequest(ex.Message);
             }
         }
 
@@ -72,6 +72,8 @@ namespace Royal_Games.Controllers
             }
         }
 
+        [HttpDelete]
+        [Authorize]
         public ActionResult Remover(int id)
         {
             try
