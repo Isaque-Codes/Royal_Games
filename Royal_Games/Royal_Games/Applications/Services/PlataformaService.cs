@@ -49,7 +49,7 @@ namespace Royal_Games.Applications.Services
         {
             if (string.IsNullOrWhiteSpace(nome))
             {
-                throw new DomainException("O nome do gênero é obrigatório.");
+                throw new DomainException("O nome é obrigatório.");
             }
         }
 
