@@ -55,7 +55,7 @@ namespace Royal_Games.Controllers
             }
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         [Authorize]
         public ActionResult Atualizar(int id, CriarGeneroDto atualizarDto)
         {

@@ -34,7 +34,7 @@ namespace Royal_Games.Applications.Services
 
             if (classBanco == null)
             {
-                throw new CannotUnloadAppDomainException("Informe o ID correto.");
+                throw new DomainException("Informe o ID correto.");
             }
 
             LerClassDto classDto = new LerClassDto

@@ -4,7 +4,7 @@ using Royal_Games.DTOs.AutenticacaoDto;
 using Royal_Games.Exceptions;
 using Royal_Games.Interfaces;
 
-namespace VH_Burguer.Applications.Services
+namespace Royal_Games.Applications.Services
 {
     public class AutenticacaoService
     {

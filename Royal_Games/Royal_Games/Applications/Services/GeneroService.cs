@@ -76,7 +76,7 @@ namespace Royal_Games.Applications.Services
 
             Genero generoBanco = _repository.ObterPorId(id);
 
-            if (generoBanco != null)
+            if (generoBanco == null)
             {
                 throw new DomainException("Não existe gênero com este ID.");
             }

@@ -8,7 +8,6 @@ using Royal_Games.Applications.Services;
 using Royal_Games.Contexts;
 using Royal_Games.Interfaces;
 using Royal_Games.Repositories;
-using VH_Burguer.Applications.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,6 +48,10 @@ builder.Services.AddSwaggerGen(c =>
 // CONEXÃO COM O BANCO
 builder.Services.AddDbContext<Royal_GamesContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
+// USUARIO
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<UsuarioService>();
+
 // JOGO
 builder.Services.AddScoped<IJogoRepository, JogoRepository>();
 builder.Services.AddScoped<JogoService>();
@@ -57,9 +60,13 @@ builder.Services.AddScoped<JogoService>();
 builder.Services.AddScoped<IGeneroRepository, GeneroRepository>();
 builder.Services.AddScoped<GeneroService>();
 
-// USUARIO
-builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-builder.Services.AddScoped<UsuarioService>();
+// PLATAFORMA
+builder.Services.AddScoped<IPlataformaRepository, PlataformaRepository>();
+builder.Services.AddScoped<PlataformaService>();
+
+// CLASSIFICAÇÃO INDICATIVA
+builder.Services.AddScoped<IClassIndicativaRepository, ClassIndicativaRepository>();
+builder.Services.AddScoped<ClassIndicativaService>();
 
 // INICIO DO JWT
 builder.Services.AddScoped<GeradorTokenJwt>();
@@ -130,6 +137,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

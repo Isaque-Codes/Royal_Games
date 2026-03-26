@@ -56,6 +56,7 @@ namespace Royal_Games.Controllers
             }
         }
 
+        [HttpPut("{id}")]
         public ActionResult Atualizar(int id, CriarClassDto atualizarDto)
         {
             try
@@ -71,6 +72,7 @@ namespace Royal_Games.Controllers
             }
         }
 
+        [HttpDelete]
         public ActionResult Remover(int id)
         {
             try
