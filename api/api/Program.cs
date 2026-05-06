@@ -52,6 +52,18 @@ builder.Services.AddDbContext<Royal_GamesContext>(options => options.UseSqlServe
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<UsuarioService>();
 
+// GENERO
+builder.Services.AddScoped<IGeneroRepository, GeneroRepository>();
+builder.Services.AddScoped<GeneroService>();
+
+// PLATAFORMA
+builder.Services.AddScoped<IPlataformaRepository, PlataformaRepository>();
+builder.Services.AddScoped<PlataformaService>();
+
+// CLASSIFICAÇÃO INDICATIVA
+builder.Services.AddScoped<IClassIndicativaRepository, ClassIndicativaRepository>();
+builder.Services.AddScoped<ClassIndicativaService>();
+
 // INÍCIO DO JWT
 builder.Services.AddScoped<GeradorTokenJwt>();
 builder.Services.AddScoped<AutenticacaoService>();

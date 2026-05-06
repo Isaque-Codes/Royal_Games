@@ -1,9 +1,6 @@
 ﻿using api.Contexts;
 using api.Domains;
 using api.Interfaces;
-using api.Contexts;
-using api.Domains;
-using api.Interfaces;
 
 namespace api.Repositories
 {
