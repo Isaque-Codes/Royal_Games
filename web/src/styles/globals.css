@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Para garantir renderização das fontes em alguns navegadores */
+    font-family: inherit;
+}
+
+:root {
+    /* CORES */
+    --preto: #0B0616;
+    --cinza: #221C2D;
+    --vermelho: #FF004C;
+    --roxo: #7A3BFF;
+    --branco: #FFFFFF;
+    --prata: #D6D2E6;
+
+    /* TAMANHO DAS FONTES */
+    --tamanho-titulo: 50px;
+    --tamanho-titulo-responsivo: 35px;
+    --tamanho-subtitulo: 30px;
+    --tamanho-texto-btn: 17px;
+    --fonte-texto: 17px;
+}
+
+/* APLICAÇÃO GLOBAL */
+body {
+    font-family: var(--fonte-secundaria), sans-serif;
+    font-size: var(--fonte-texto);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fonte-principal), sans-serif;
+}
