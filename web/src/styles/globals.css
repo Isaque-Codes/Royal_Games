@@ -23,6 +23,12 @@
     --fonte-texto: 17px;
 }
 
+/* ESPACAMENTO LATERAL EXTERNO PADRÃO */
+.layout_guide {
+    width: 80%;
+    margin: 0 auto;
+}
+
 /* APLICAÇÃO GLOBAL */
 body {
     font-family: var(--fonte-secundaria), sans-serif;

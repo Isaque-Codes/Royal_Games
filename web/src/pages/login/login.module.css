@@ -1,0 +1,129 @@
+body {
+    background: linear-gradient(to right, #362b50 10%, var(--cinza) 40%, var(--preto) 80%);
+}
+
+#main {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    align-items: center;
+}
+
+/* -------------------------------- SECAO ESQUERDA ------------------------------- */
+
+#esquerda {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#fig1 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#fig1 img {
+    width: 100%;
+    height: 97%;
+    object-fit: contain;
+    object-position: bottom;
+    display: block;
+}
+
+/* -------------------------------- SECAO DIREITA ------------------------------- */
+
+#direita {
+    width: 50%;
+    height: 80%;
+    border-style: groove;
+    border-radius: 10px;
+    border-color: var(--prata);
+    padding-top: 6%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#fig2 img {
+    width: 125%; 
+    height: 125%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); /* Move a imagem metade do próprio tamanho para a esquerda */
+}
+
+#form {
+    height: 50%;
+    width: 70%;
+    margin-bottom: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15%;
+    width: 100%;
+}
+
+#form label {
+    color: var(--prata);
+    margin-bottom: 8px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    color: var(--prata);
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-image: linear-gradient(var(--cinza), var(--cinza)), 
+                      linear-gradient(to right, white, var(--prata), white);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.input:focus {
+    /* Inverte ou clareia no foco para efeito "glow" */
+    background-image: linear-gradient(var(--preto), var(--preto)), 
+                      linear-gradient(to right, var(--vermelho), var(--prata), var(--vermelho));
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+#form button {
+    width: 50%;
+    padding: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--prata);
+    
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-image: linear-gradient(var(--cinza), var(--cinza)), 
+                      linear-gradient(to right, var(--vermelho), var(--vermelho), var(--vermelho));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    
+    transition: 0.4s;
+}
+
+#form button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
