@@ -1,0 +1,131 @@
+body {
+    background: linear-gradient(to right, #362b50 10%, var(--cinza) 40%, var(--preto) 80%);
+}
+
+
+#main {
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --------------------------------- SECAO CADASTRO --------------------------------- */
+
+#cadastro {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5%;
+    /* background-color: aqua; */
+}
+
+#titulo_cadastro {
+    color: var(--branco);
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#form {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.div_form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.div_form label {
+    color: var(--branco);
+}
+
+.div_form input {
+    width: 100%;
+    padding: 12px;
+    color: var(--prata);
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-image: linear-gradient(var(--bgc-btn), var(--cinza)),
+        linear-gradient(to right, white, var(--prata), white);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.div_form input:focus {
+    background-image: linear-gradient(var(--preto), var(--bgc-btn)),
+        linear-gradient(to right, var(--vermelho), var(--prata), var(--vermelho));
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+#cadastro_direita {
+    width: 45%;
+    height: 99%;
+}
+
+#cadastro_direita input {
+    height: 100%;
+}
+
+#cadastro_esquerda {
+    width: 45%;
+    height: 100%;
+}
+
+#nome {
+    width: 100%;
+    height: 33%;
+}
+
+#esquerda_meio {
+    width: 100%;
+    height: 33%;
+    display: flex;
+}
+
+#esquerda_baixo {
+    width: 100%;
+    height: 33%;
+    display: flex;
+}
+
+#btn_cadastro {
+    width: 15%;
+    padding: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--prata);
+
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-image: linear-gradient(var(--cinza), var(--bgc-btn)),
+        linear-gradient(to right, var(--vermelho), var(--vermelho), var(--vermelho));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    transition: 0.4s;
+}
+
+#btn_cadastro:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* --------------------------------- SECAO LISTA JOGOS ------------------------------ */
+
+#titulo_lista {
+    color: var(--branco);
+}
