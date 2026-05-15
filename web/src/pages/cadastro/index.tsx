@@ -20,7 +20,7 @@ const Cadastro = () => {
                             <div id={styles.esquerda_meio}>
                                 <div id={styles.valor} className={styles.div_form}>
                                     <label htmlFor="">Valor</label>
-                                    <input type="number" />
+                                    <input type="text" />
                                 </div>
                                 <div id={styles.genero} className={styles.div_form}>
                                     <label htmlFor="">Gênero</label>
@@ -44,22 +44,27 @@ const Cadastro = () => {
                         </div>
                         <div id={styles.cadastro_direita} className={styles.div_form}>
                             <label htmlFor="">Descrição</label>
-                            <input type="text" />
+                            <input type="textarea" />
                         </div>
                     </form>
                     <button id={styles.btn_cadastro}>Cadastrar</button>
                 </section>
 
                 {/* SECAO LISTA JOGOS */}
-
-                <h2 id={styles.titulo_lista}>Lista de jogos</h2>
-                <div id={styles.pesquisa}>
-                    <input type="text" />
-                    <button>Menor Preço</button>
-                    <button>Categoria</button>
-                </div>
+                <section id={styles.listagem} className="layout_guide">
+                    <h2 id={styles.titulo_lista}>Lista de jogos</h2>
+                    <div id={styles.pesquisa}>
+                        <input id={styles.barra_pesquisa} className={styles.filtro} type="textarea" placeholder="Pesquise..." />
+                        <select className={`${styles.filtro} ${styles.opcao}`} name="" id="">
+                            <option value="">Menor Preço</option>
+                            <option value="">Maior Preço</option>
+                        </select>
+                        <select className={`${styles.filtro} ${styles.opcao}`} name="" id="">
+                            <option value="">Categoria</option>
+                        </select>
+                    </div>
+                </section>
             </main>
-
             <Footer />
         </>
     )

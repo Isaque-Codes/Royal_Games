@@ -18,7 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1.5%;
+    margin-bottom: 9%;
     /* background-color: aqua; */
 }
 
@@ -33,6 +33,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 2%;
 }
 
 .div_form {
@@ -43,10 +44,10 @@ body {
 
 .div_form label {
     color: var(--branco);
+    margin-bottom: 1%;
 }
 
 .div_form input {
-    width: 100%;
     padding: 12px;
     color: var(--prata);
     background: rgba(255, 255, 255, 0.05);
@@ -75,6 +76,7 @@ body {
 
 #cadastro_direita input {
     height: 100%;
+    resize: none;
 }
 
 #cadastro_esquerda {
@@ -83,20 +85,33 @@ body {
 }
 
 #nome {
-    width: 100%;
-    height: 33%;
+    width: 97.5%;
+    height: 25%;
+    margin-bottom: 3%;
 }
 
+#nome input {}
+
 #esquerda_meio {
-    width: 100%;
-    height: 33%;
+    width: 99%;
+    height: 25%;
+    margin-bottom: 3%;
     display: flex;
+}
+
+#esquerda_meio input {
+    width: 95%;
 }
 
 #esquerda_baixo {
     width: 100%;
-    height: 33%;
+    height: 25%;
+    margin-bottom: 3%;
     display: flex;
+}
+
+#esquerda_baixo input {
+    width: 95%;
 }
 
 #btn_cadastro {
@@ -126,6 +141,50 @@ body {
 
 /* --------------------------------- SECAO LISTA JOGOS ------------------------------ */
 
+#listagem {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #titulo_lista {
     color: var(--branco);
+    margin-bottom: 2%;
+}
+
+#pesquisa {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#barra_pesquisa {
+    width: 65%;
+}
+
+.filtro {
+    padding: 12px;
+    color: var(--prata);
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-image: linear-gradient(var(--bgc-btn), var(--cinza)),
+        linear-gradient(to right, white, var(--prata), white);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.filtro :focus {
+    background-image: linear-gradient(var(--preto), var(--bgc-btn)),
+        linear-gradient(to right, var(--vermelho), var(--prata), var(--vermelho));
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.opcao {
+    width: 15%;
 }
