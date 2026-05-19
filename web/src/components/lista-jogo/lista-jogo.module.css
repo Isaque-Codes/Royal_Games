@@ -1,0 +1,86 @@
+#botoes_home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+    gap: 20px;
+    margin-bottom: 5%;
+    height: 100%;
+    width: 100%;
+}
+
+#cards_jogo {
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+    margin-bottom: 2%;
+}
+
+#barra_pesquisa {
+    background-color: #535050d9;
+    width: 22vw;
+    height: 5vh;
+    padding: 12px;
+    color: var(--branco);
+    border: 1px solid transparent;
+    border-color: var(--branco);
+    border-radius: 8px;
+    opacity: 0.7;
+    background-origin: border-box;
+    background-image: linear-gradient(var(--preto), var(--preto)),
+        linear-gradient(to right, var(--branco), var(--branco), var(--branco));
+}
+
+.botao_filtrar {
+    background-color: #535050d9;
+    color: var(--branco);
+    border: 1px solid transparent;
+    border-color: var(--branco);
+    border-radius: 8px;
+    opacity: 0.7;
+    background-origin: border-box;
+    background-image: linear-gradient(var(--preto), var(--preto)),
+        linear-gradient(to right, var(--branco), var(--branco), var(--branco));
+    height: 5vh;
+    width: 12vw;
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+}
+
+#listar_jogos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.botao_lista {
+    background-color: var(--cinza);
+    border-color: var(--vermelho);
+    color: var(--branco);
+    font-size: 25px;
+    border-radius: 10;
+    width: 3%;
+    height: 5vh;
+}
+
+.seta {
+    width: 4%;
+    height: 5vh;
+    background-color: var(--cinza);
+    border-color: var(--vermelho);
+    color: var(--vermelho);
+    border-radius: 10;
+}
+
+.seta img {
+    width: 40%;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+    opacity: 0.9;
+}

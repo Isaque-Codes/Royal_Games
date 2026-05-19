@@ -1,7 +1,7 @@
 import styles from "./cadastro.module.css"
 import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
-import CardCadastro from "@/components/card-cadastro/card-cadastro";
+import CardCadastro from "@/components/card-produto/card-produto";
 
 const Cadastro = () => {
     return (

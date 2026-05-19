@@ -8,12 +8,12 @@ type Jogo = {
     img: string,
     preco: number,
     jogoID: number,
-    // Props que recebe função
+    //Criando uma props que recebe uma função
     onDelete: (jogoId: number) => void,
     estaLogado: boolean
 }
 
-const CardCadastro = ({ titulo, descricao, img, preco, jogoID, onDelete, estaLogado }: Jogo) => {
+const CardProduto = ({ titulo, descricao, img, preco, jogoID, onDelete, estaLogado }: Jogo) => {
     return (
         <article className={styles.card_jogo}>
             <Link href={"/detalhe-jogo/" + jogoID}>
@@ -38,4 +38,4 @@ const CardCadastro = ({ titulo, descricao, img, preco, jogoID, onDelete, estaLog
     )
 }
 
-export default CardCadastro;
+export default CardProduto;
