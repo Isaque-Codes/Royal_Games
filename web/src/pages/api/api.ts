@@ -1,11 +1,11 @@
 import axios from "axios";
 import secureLocalStorage from "react-secure-storage";
 
-const apiLocal = "https://localhost:7057/api/";
+const apiLocal = "https://localhost:7035/api/";
 
 const apiRemota = "";
 
-//criar um endereco da api dentro do axios
+// Cria um endereco da api dentro do axios
 export const api = axios.create({
     baseURL: apiLocal
 })

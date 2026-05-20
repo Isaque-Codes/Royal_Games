@@ -48,6 +48,16 @@ builder.Services.AddSwaggerGen(c =>
 // CONEXÃO COM O BANCO
 builder.Services.AddDbContext<Royal_GamesContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("NextApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000") // Habilita requisições pela porta 3000
+              .AllowAnyHeader()                     // Permite enviar JWT e Content-Type
+              .AllowAnyMethod();                    // Permite POST, GET, PUT, DELETE
+    });
+});
+
 // USUARIO
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<UsuarioService>();
@@ -136,6 +146,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// HABILITA CORS PARA PERMITIR REQUISIÇÕES DO FRONTEND
+app.UseCors("NextApp");
 
 // AUTHENTICATION: HABILITA AUTENTICAÇÃO DO SWAGGER
 app.UseAuthentication();

@@ -6,8 +6,8 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const Login = () => {
 
-    const [email, setEmail] = useState<string>("");
-    const [senha, setSenha] = useState<string>("");
+    const [Email, setEmail] = useState<string>("");
+    const [Senha, setSenha] = useState<string>("");
 
     const router = useRouter();
     const notificacao = (msg: string) => toast.success(msg);
@@ -16,7 +16,7 @@ const Login = () => {
     async function autenticar(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
-            await login(email, senha);
+            await login(Email, Senha);
             notificacao("Login bem sucedido!")
 
             //espera 2 segundos para redirecionar para a login
@@ -46,12 +46,12 @@ const Login = () => {
                         <div>
                             <label htmlFor="">E-mail</label>
                             <input className={styles.input} type="text" name="email" placeholder="email@exemplo.com" required
-                                value={email} onChange={(e) => setEmail(e.target.value)} />
+                                value={Email} onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <div id="ajuste">
                             <label htmlFor="">Senha</label>
                             <input className={styles.input} type="password" name="senha" placeholder="*******" required
-                                value={senha} onChange={(e) => setSenha(e.target.value)} />
+                                value={Senha} onChange={(e) => setSenha(e.target.value)} />
                         </div>
                         <button type="submit">Entrar</button>
                     </form>
