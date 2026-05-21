@@ -1,7 +1,7 @@
 import styles from "./cadastro.module.css"
 import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
-import CardCadastro from "@/components/card-produto/card-produto";
+import ListaJogo from "@/components/lista-jogo/lista-jogo";
 
 const Cadastro = () => {
     return (
@@ -63,6 +63,7 @@ const Cadastro = () => {
                             <option value="">Categoria</option>
                         </select>
                     </div>
+                    <ListaJogo />
                 </section>
             </main>
             <Footer />
